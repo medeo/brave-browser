@@ -18,6 +18,11 @@ const createDist = require('../lib/createDist')
 const upload = require('../lib/upload')
 const test = require('../lib/test')
 
+const collect = (value, accumulator) => {
+  accumulator.push(value)
+  return accumulator
+}
+
 const parsedArgs = program.parseOptions(process.argv)
 
 program
@@ -39,10 +44,13 @@ program
   .option('--official_build <official_build>', 'force official build settings')
   .option('--brave_google_api_key <brave_google_api_key>')
   .option('--brave_google_api_endpoint <brave_google_api_endpoint>')
+  .option('--brave_infura_project_id <brave_infura_project_id>')
   .option('--channel <target_chanel>', 'target channel to build', /^(beta|dev|nightly|release)$/i, 'release')
   .option('--ignore_compile_failure', 'Keep compiling regardless of error')
   .option('--skip_signing', 'skip signing binaries')
   .option('--xcode_gen <target>', 'Generate an Xcode workspace ("ios" or a list of semi-colon separated label patterns, run `gn help label_pattern` for more info.')
+  .option('--gn <arg>', 'Additional gn args, in the form <key>:<value>', collect, [])
+  .option('--ninja <opt>', 'Additional Ninja command-line options, in the form <key>:<value>', collect, [])
   .arguments('[build_config]')
   .action(build)
 
@@ -57,6 +65,7 @@ program
   .option('--official_build <official_build>', 'force official build settings')
   .option('--brave_google_api_key <brave_google_api_key>')
   .option('--brave_google_api_endpoint <brave_google_api_endpoint>')
+  .option('--brave_infura_project_id <brave_infura_project_id>')
   .option('--channel <target_chanel>', 'target channel to build', /^(beta|dev|nightly|release)$/i, 'release')
   .option('--build_omaha', 'build omaha stub/standalone installer')
   .option('--tag_ap <ap>', 'ap for stub/standalone installer')
@@ -99,10 +108,12 @@ program
 
 program
   .command('pull_l10n')
+  .option('--extension <extension>', 'Scope this command to localize a Brave extension such as ethereum-remote-client')
   .action(pullL10n)
 
 program
   .command('push_l10n')
+  .option('--extension <extension>', 'Scope this command to localize a Brave extension such as ethereum-remote-client')
   .action(pushL10n)
 
 program

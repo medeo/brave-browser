@@ -1,5 +1,74 @@
 # Changelog
 
+## [0.68.131](https://github.com/brave/brave-browser/releases/tag/v0.68.131)
+
+ - Added ability to tip Reddit publishers. ([#4745](https://github.com/brave/brave-browser/issues/4745))
+ - Added ability to tip Vimeo publishers. ([#4391](https://github.com/brave/brave-browser/issues/4391))
+ - Added ability for users to hide background images on the new tab page. ([#4523](https://github.com/brave/brave-browser/issues/4523))
+ - Added ability to select default search engine during onboarding. ([#1548](https://github.com/brave/brave-browser/issues/1548))
+ - Replaced adblock library with new Rust based library. ([#4793](https://github.com/brave/brave-browser/issues/4793))
+ - Replaced PDF.js in favor of PDFium. ([#3846](https://github.com/brave/brave-browser/issues/3846))
+ - Disabled field trials. ([#4283](https://github.com/brave/brave-browser/issues/4283))
+ - Combined Trackers Blocked and Ads Blocked under the new tab page. ([#5273](https://github.com/brave/brave-browser/issues/5273))
+ - Updated order of brave://settings sections for popularity and complexity. ([#4108](https://github.com/brave/brave-browser/issues/4108))
+ - Updated labels on brave://settings/shields and Brave Shields panel for consistency. ([#3589](https://github.com/brave/brave-browser/issues/3589))
+ - Updated macOS installer graphics. ([#1105](https://github.com/brave/brave-browser/issues/1105))
+ - Updated dialog box text when installing extensions. ([#3231](https://github.com/brave/brave-browser/issues/3231))
+ - Removed sliding notification animation in URL bar. ([#3751](https://github.com/brave/brave-browser/issues/3751))
+ - Removed settings button from ad notification on Linux (Gnome). ([#4231](https://github.com/brave/brave-browser/issues/4231))
+ - Fixed publisher "Thank you" banner not being automatically dismissed. ([#4590](https://github.com/brave/brave-browser/issues/4590))
+ - Fixed ad notifications not being displayed until browser restart after toggling Brave ads off and on. ([#4748](https://github.com/brave/brave-browser/issues/4748))
+ - Fixed dynamically generated PDFs not loading properly. ([#884](https://github.com/brave/brave-browser/issues/884))
+ - Fixed PDFs inside of popup windows not loading. ([#3119](https://github.com/brave/brave-browser/issues/3119))
+ - Fixed unable to print from Google Drive. ([#3694](https://github.com/brave/brave-browser/issues/3694))
+ - Fixed inability to fill out online PDFs. ([#5033](https://github.com/brave/brave-browser/issues/5033))
+ - Fixed PDFs not loading in certain cases. ([#4424](https://github.com/brave/brave-browser/issues/4424))
+ - Fixed inability to hide bookmarks bar on new tab page. ([#1306](https://github.com/brave/brave-browser/issues/1306))
+ - Fixed URL bar not showing full URL. ([#2192](https://github.com/brave/brave-browser/issues/2192))
+ - Fixed interception of media keys. ([#3807](https://github.com/brave/brave-browser/issues/3807))
+ - Fixed display mismatch between main view and detailed view under Brave Shields when blocking scripts. ([#4228](https://github.com/brave/brave-browser/issues/4228))
+ - Fixed cosmetic filter not working in certain cases. ([#4417](https://github.com/brave/brave-browser/issues/4417))
+ - Fixed inability to play Amazon music. ([#3308](https://github.com/brave/brave-browser/issues/3308))
+ - Fixed display issue on brave://downloads. ([#5330](https://github.com/brave/brave-browser/issues/5330))
+
+## [0.67.125](https://github.com/brave/brave-browser/releases/tag/v0.67.125)
+
+ - Fixed retry logic for failed ads confirmations. ([#5548](https://github.com/brave/brave-browser/issues/5548))
+
+## [0.67.124](https://github.com/brave/brave-browser/releases/tag/v0.67.124)
+
+ - Upgraded Chromium to 76.0.3809.100. ([#5554](https://github.com/brave/brave-browser/issues/5554))
+
+## [0.67.123](https://github.com/brave/brave-browser/releases/tag/v0.67.123)
+
+ - Added the ability to tip Twitter publishers. ([#4346](https://github.com/brave/brave-browser/issues/4346))
+ - Added the ability to tweet about a tip. ([#4393](https://github.com/brave/brave-browser/issues/4393))
+ - Added the ability to opt-in to user private Brave ads for Australia, New Zealand and Ireland. ([#5153](https://github.com/brave/brave-browser/issues/5153))
+ - Added retries for pending contributions. ([#3741](https://github.com/brave/brave-browser/issues/3741))
+ - Added detailed view of pending contributions under brave://rewards. ([#3175](https://github.com/brave/brave-browser/issues/3175))
+ - Added list view of excluded sites under brave://rewards. ([#3657](https://github.com/brave/brave-browser/issues/3657))
+ - Added visual confirmation that a verified publisher check is complete in rewards panel. ([#4351](https://github.com/brave/brave-browser/issues/4351))
+ - Updated verified publisher icon throughout Brave Rewards. ([#4162](https://github.com/brave/brave-browser/issues/4162))
+ - Updated default tipping banner text. ([#4616](https://github.com/brave/brave-browser/issues/4616))
+ - Fixed referrer spoofing disabling some forms of login CSRF protections. ([#3422](https://github.com/brave/brave-browser/issues/3422))
+ - Fixed ad summary not being refreshed after redeeming tokens. ([#5011](https://github.com/brave/brave-browser/issues/5011))
+ - Fixed retries for failed ad reward balances. ([#5175](https://github.com/brave/brave-browser/issues/5175))
+ - Fixed incorrect "Insufficient funds" notification when auto-contribute table is blank. ([#4104](https://github.com/brave/brave-browser/issues/4104))
+ - Fixed incorrectly showing publishers with zero attention in auto-contribute table. ([#4386](https://github.com/brave/brave-browser/issues/4386))
+ - Fixed restored wallet not checking for a grant. ([#4220](https://github.com/brave/brave-browser/issues/4220))
+ - Fixed inability to collect TFuel tokens on https://www.sliver.tv. ([#5380](https://github.com/brave/brave-browser/issues/5380))
+ - Fixed padding on the new tab page for right-to-left locales. ([#3574](https://github.com/brave/brave-browser/issues/3574))
+ - Upgraded Chromium to 76.0.3809.87. ([#5424](https://github.com/brave/brave-browser/issues/5424))
+
+## [0.66.101](https://github.com/brave/brave-browser/releases/tag/v0.66.101)
+
+ - Fixed bookmarks being synced more often than needed in certain conditions. ([#5300](https://github.com/brave/brave-browser/issues/5300))
+
+## [0.66.100](https://github.com/brave/brave-browser/releases/tag/v0.66.100)
+
+ - Fixed Chromecast configuration - it no longer initiates UPnP connections by default. ([#5070](https://github.com/brave/brave-browser/issues/5070))
+ - Upgraded Chromium to 75.0.3770.142. ([#5253](https://github.com/brave/brave-browser/issues/5253))
+
 ## [0.66.99](https://github.com/brave/brave-browser/releases/tag/v0.66.99)
 
  - Added new Brave Rewards icon for verified publishers. ([#4043](https://github.com/brave/brave-browser/issues/4043))
